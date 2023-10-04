@@ -1,4 +1,3 @@
-import io.qameta.allure.gradle.base.AllureExtension
 
 plugins {
     id("java")
