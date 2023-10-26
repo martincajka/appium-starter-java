@@ -20,12 +20,11 @@ tasks.test {
 
 dependencies {
     implementation("io.appium:java-client:8.5.1")
+    implementation("org.apache.logging.log4j:log4j-core:2.20.0")
+    implementation("org.apache.logging.log4j:log4j-api:2.20.0")
     testImplementation("io.qameta.allure:allure-java-commons:$allureVersion")
     testImplementation(platform("org.junit:junit-bom:5.9.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("io.qameta.allure:allure-java-commons")
 }
-
-
-
 
