@@ -8,7 +8,6 @@ import java.util.function.Supplier;
 
 public class DefaultCapabilitiesSupplier implements Supplier<BaseOptions> {
     private final Platform platform;
-    private BaseOptions capabilities;
 
     public DefaultCapabilitiesSupplier(Platform platform) {
         this.platform = platform;
@@ -17,7 +16,7 @@ public class DefaultCapabilitiesSupplier implements Supplier<BaseOptions> {
 
     @Override
     public BaseOptions get() {
-        capabilities = new BaseOptions();
+        BaseOptions capabilities = new BaseOptions();
         capabilities.setPlatformName(platform.name());
         if (platform.is(Platform.ANDROID)) {
             capabilities.setCapability(BaseOptions.toW3cName("deviceName"), "Android Emulator");
